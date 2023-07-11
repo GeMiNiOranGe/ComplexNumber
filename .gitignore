@@ -53,3 +53,10 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
+
+# Build directories
+build
+
+# Editor configurations
+.vs
+.vscode
