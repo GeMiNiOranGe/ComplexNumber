@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.25)
 
 project(ComplexNumber VERSION 0.0.1.0 LANGUAGES CXX)
 
+option(BUILD_EXAMPLES "Build example programs" OFF)
+
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
@@ -27,3 +29,8 @@ target_include_directories(complex_number PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     $<INSTALL_INTERFACE:include>
 )
+
+# Build examples
+if (BUILD_EXAMPLES)
+    add_subdirectory(examples)
+endif()
