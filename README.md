@@ -8,14 +8,23 @@ A lightweight library that provides a simple `ComplexNumber` class for working w
 
 ## How to build examples
 
-Open terminal and run the command line below
+1. Configure all projects
 
 ```bash
 cmake -B build -S . -DBUILD_EXAMPLES=ON
-cmake --build build
 ```
 
-Run the example. Also you can see more examples [here](examples).
+2. build projects
+
+```bash
+# Build all examples
+cmake --build build
+
+# Or just one
+cmake --build build --target example_01_print_complex
+```
+
+3. Run the example. Also you can see more examples [here](examples).
 
 ```sh
 ./build/examples/example_01_print_complex.exe
