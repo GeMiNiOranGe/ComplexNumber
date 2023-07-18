@@ -7,6 +7,16 @@ ComplexNumber::ComplexNumber(double real, double imaginary) {
     this->imaginary_ = imaginary;
 }
 
+ComplexNumber::ComplexNumber(const ComplexNumber & complex_number) {
+    this->real_ = complex_number.real_;
+    this->imaginary_ = complex_number.imaginary_;
+}
+
+ComplexNumber::ComplexNumber(ComplexNumber && complex_number) {
+    this->real_ = std::exchange(complex_number.real_, 0.0);
+    this->imaginary_ = std::exchange(complex_number.imaginary_, 0.0);
+}
+
 ComplexNumber::~ComplexNumber() {
 }
 
