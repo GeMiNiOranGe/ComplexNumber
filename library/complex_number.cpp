@@ -36,6 +36,15 @@ void ComplexNumber::set_imaginary(double image) {
     this->imaginary_ = image;
 }
 
+ComplexNumber & ComplexNumber::operator=(ComplexNumber && complex_number) {
+    if (this == &complex_number) {
+        return *this;
+    }
+    this->real_ = std::exchange(complex_number.real_, 0.0);
+    this->imaginary_ = std::exchange(complex_number.imaginary_, 0.0);
+    return *this;
+}
+
 std::istream &operator>>(std::istream &istr, ComplexNumber &val) {
     double real, imaginary;
     istr >> real >> imaginary;
