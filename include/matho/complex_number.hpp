@@ -11,7 +11,7 @@ private:
     double real_, imaginary_;
 
 public:
-    ComplexNumber(double real = 0.0, double imaginary = 0.0);
+    explicit ComplexNumber(double real = 0.0, double imaginary = 0.0);
     ComplexNumber(const ComplexNumber & complex_number);
     ComplexNumber(ComplexNumber && complex_number);
     ~ComplexNumber();
