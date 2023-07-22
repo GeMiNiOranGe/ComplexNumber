@@ -58,4 +58,15 @@ std::ostream &operator<<(std::ostream &ostr, const ComplexNumber &val) {
     return ostr;
 }
 
+ComplexNumber &operator+=(ComplexNumber & left, const ComplexNumber & right) {
+    left.set_real(left.get_real() + right.get_real());
+    left.set_imaginary(left.get_imaginary() + right.get_imaginary());
+    return left;
+}
+
+ComplexNumber &operator+=(ComplexNumber & left, double right) {
+    left.set_real(left.get_real() + right);
+    return left;
+}
+
 } // namespace matho
