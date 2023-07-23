@@ -32,6 +32,8 @@ std::ostream &operator<<(std::ostream &ostr, const ComplexNumber &val);
 #pragma region Binary arithmetic operators with another complex number
 ComplexNumber &operator+=(ComplexNumber & left, const ComplexNumber & right);
 
+ComplexNumber &operator-=(ComplexNumber & left, const ComplexNumber & right);
+
 inline ComplexNumber operator+(
     const ComplexNumber & left,
     const ComplexNumber & right
@@ -40,14 +42,31 @@ inline ComplexNumber operator+(
     result += right;
     return result;
 }
+
+inline ComplexNumber operator-(
+    const ComplexNumber & left,
+    const ComplexNumber & right
+) {
+    ComplexNumber result = left;
+    result -= right;
+    return result;
+}
 #pragma endregion
 
 #pragma region Binary arithmetic operators with a number on the right-hand side
 ComplexNumber &operator+=(ComplexNumber & left, double right);
 
+ComplexNumber &operator-=(ComplexNumber & left, double right);
+
 inline ComplexNumber operator+(const ComplexNumber & left, double right) {
     ComplexNumber result = left;
     result += right;
+    return result;
+}
+
+inline ComplexNumber operator-(const ComplexNumber & left, double right) {
+    ComplexNumber result = left;
+    result -= right;
     return result;
 }
 #pragma endregion
@@ -56,6 +75,12 @@ inline ComplexNumber operator+(const ComplexNumber & left, double right) {
 inline ComplexNumber operator+(double left, const ComplexNumber & right) {
     ComplexNumber result(left);
     result += right;
+    return result;
+}
+
+inline ComplexNumber operator-(double left, const ComplexNumber & right) {
+    ComplexNumber result(left);
+    result -= right;
     return result;
 }
 #pragma endregion
