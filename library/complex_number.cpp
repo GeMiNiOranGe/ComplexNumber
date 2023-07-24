@@ -70,6 +70,14 @@ ComplexNumber &operator-=(ComplexNumber & left, const ComplexNumber & right) {
     return left;
 }
 
+ComplexNumber &operator*=(ComplexNumber & left, const ComplexNumber & right) {
+    double a = left.get_real(), b = left.get_imaginary();
+    double c = right.get_real(), d = right.get_imaginary();
+    left.set_real(a * c - b * d);
+    left.set_imaginary(a * d + b * c);
+    return left;
+}
+
 ComplexNumber &operator+=(ComplexNumber & left, double right) {
     left.set_real(left.get_real() + right);
     return left;
@@ -77,6 +85,12 @@ ComplexNumber &operator+=(ComplexNumber & left, double right) {
 
 ComplexNumber &operator-=(ComplexNumber & left, double right) {
     left.set_real(left.get_real() - right);
+    return left;
+}
+
+ComplexNumber &operator*=(ComplexNumber & left, double right) {
+    left.set_real(left.get_real() * right);
+    left.set_imaginary(left.get_imaginary() * right);
     return left;
 }
 
