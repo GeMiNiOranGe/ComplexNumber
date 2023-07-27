@@ -3,6 +3,7 @@
 #define COMPLEX_NUMBER_HPP
 
 #include <iostream>
+#include <sstream>
 
 namespace matho {
 
@@ -21,6 +22,8 @@ public:
 
     void set_real(double real);
     void set_imaginary(double imaginary);
+
+    std::string to_string() const;
 
     ComplexNumber & operator=(const ComplexNumber & complex_number) = default;
     ComplexNumber & operator=(ComplexNumber && complex_number);

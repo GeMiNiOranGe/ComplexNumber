@@ -36,6 +36,48 @@ void ComplexNumber::set_imaginary(double image) {
     this->imaginary_ = image;
 }
 
+std::string ComplexNumber::to_string() const {
+    /*
+    TODO: Possible output formats to support in the future:
+    - Mathematical format: "a + bi"
+    - Parser-friendly format: "a+bi" (no spaces)
+    - UI format: "Re: a, Im: b"
+    - Fraction format: using the Fraction library. It’s elegant and avoids
+      overflow or precision issues with the double type
+    - Scientific format: scientific notation for floating-point values
+    */
+
+    std::stringstream result;
+
+    if (this->real_ == 0 && this->imaginary_ == 0) {
+        result << 0;
+        return result.str();
+    }
+
+    if (this->real_ == 0) {
+        result << this->imaginary_ << "i";
+    }
+    else {
+        if (this->imaginary_ == 0) {
+            result << this->real_;
+        }
+        else if (this->imaginary_ == 1) {
+            result << this->real_ << "+i";
+        }
+        else if (this->imaginary_ == -1) {
+            result << this->real_ << "-i";
+        }
+        else if (this->imaginary_ < 0) {
+            result << this->real_ << this->imaginary_ << "i";
+        }
+        else {
+            result << this->real_ << "+" << this->imaginary_ << "i";
+        }
+    }
+
+    return result.str();
+}
+
 ComplexNumber & ComplexNumber::operator=(ComplexNumber && complex_number) {
     if (this == &complex_number) {
         return *this;
@@ -54,7 +96,7 @@ std::istream &operator>>(std::istream &istr, ComplexNumber &val) {
 }
 
 std::ostream &operator<<(std::ostream &ostr, const ComplexNumber &val) {
-    ostr << val.get_real() << "+" << val.get_imaginary() << "i";
+    ostr << val.to_string();
     return ostr;
 }
 
