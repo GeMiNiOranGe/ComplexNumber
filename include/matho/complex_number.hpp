@@ -23,6 +23,7 @@ public:
     void set_real(double real);
     void set_imaginary(double imaginary);
 
+    double abs() const;
     std::string to_string() const;
 
     ComplexNumber & operator=(const ComplexNumber & complex_number) = default;

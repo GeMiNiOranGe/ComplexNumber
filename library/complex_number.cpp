@@ -36,13 +36,17 @@ void ComplexNumber::set_imaginary(double image) {
     this->imaginary_ = image;
 }
 
+double ComplexNumber::abs() const {
+    return std::sqrt(real_ * real_ + imaginary_ * imaginary_);
+}
+
 std::string ComplexNumber::to_string() const {
     /*
     TODO: Possible output formats to support in the future:
     - Mathematical format: "a + bi"
     - Parser-friendly format: "a+bi" (no spaces)
     - UI format: "Re: a, Im: b"
-    - Fraction format: using the Fraction library. It’s elegant and avoids
+    - Fraction format: using the Fraction library. It's elegant and avoids
       overflow or precision issues with the double type
     - Scientific format: scientific notation for floating-point values
     */
