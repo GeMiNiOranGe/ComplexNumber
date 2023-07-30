@@ -40,6 +40,10 @@ double ComplexNumber::abs() const {
     return std::sqrt(real_ * real_ + imaginary_ * imaginary_);
 }
 
+ComplexNumber ComplexNumber::conjugate() const {
+    return ComplexNumber(real_, -imaginary_);
+}
+
 std::string ComplexNumber::to_string() const {
     /*
     TODO: Possible output formats to support in the future:
