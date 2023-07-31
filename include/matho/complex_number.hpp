@@ -140,6 +140,37 @@ inline ComplexNumber operator/(double left, const ComplexNumber & right) {
 }
 #pragma endregion
 
+#pragma region Comparison operators with another complex number
+inline bool operator==(const ComplexNumber & left, const ComplexNumber & right) {
+    return left.get_real() == right.get_real()
+        && left.get_imaginary() == right.get_imaginary();
+}
+
+inline bool operator!=(const ComplexNumber & left, const ComplexNumber & right) {
+    return !operator==(left, right);
+}
+#pragma endregion
+
+#pragma region Comparison operators with a number on the right-hand side
+inline bool operator==(const ComplexNumber & left, double right) {
+    return left.get_real() == right && left.get_imaginary() == 0.0;
+}
+
+inline bool operator!=(const ComplexNumber & left, double right) {
+    return !operator==(left, right);
+}
+#pragma endregion
+
+#pragma region Comparison operators with a number on the left-hand side
+inline bool operator==(double left, const ComplexNumber & right) {
+    return left == right.get_real() && 0.0 == right.get_imaginary();
+}
+
+inline bool operator!=(double left, const ComplexNumber & right) {
+    return !operator==(left, right);
+}
+#pragma endregion
+
 } // namespace matho
 
 #endif // end COMPLEX_NUMBER_HPP
