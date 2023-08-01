@@ -2,11 +2,11 @@
 
 #include <matho/complex_number.hpp>
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const * argv[]) {
     matho::ComplexNumber a(3.0, 4.0);
 
-    std::cout << ">>> Demonstration of Move Constructor <<<" << std::endl;
-    std::cout << std::endl;
+    std::cout << ">>> Demonstration of Move Constructor <<<";
+    std::cout << std::endl << std::endl;
 
     std::cout << "Given:" << std::endl;
     std::cout << "  A = " << a << std::endl;
@@ -29,8 +29,8 @@ int main(int argc, char const *argv[]) {
     matho::ComplexNumber c(10.0, 20.0);
     matho::ComplexNumber d(1.0, 1.0);
 
-    std::cout << ">>> Demonstration of Move Assignment <<<" << std::endl;
-    std::cout << std::endl;
+    std::cout << ">>> Demonstration of Move Assignment <<<";
+    std::cout << std::endl << std::endl;
 
     std::cout << "Given:" << std::endl;
     std::cout << "  C = " << c << std::endl;

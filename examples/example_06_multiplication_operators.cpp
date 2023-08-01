@@ -6,8 +6,8 @@ int main() {
     matho::ComplexNumber a(2, 3);
     matho::ComplexNumber b(4, -1);
 
-    std::cout << ">>> Demonstration of Complex Number Multiplication <<<" << std::endl;
-    std::cout << std::endl;
+    std::cout << ">>> Demonstration of Complex Number Multiplication <<<";
+    std::cout << std::endl << std::endl;
 
     std::cout << "Given:" << std::endl;
     std::cout << "  A = " << a << std::endl;

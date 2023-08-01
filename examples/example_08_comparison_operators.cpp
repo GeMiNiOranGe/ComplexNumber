@@ -2,13 +2,13 @@
 
 #include <matho/complex_number.hpp>
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const * argv[]) {
     matho::ComplexNumber a(5.0, 0.0);
     matho::ComplexNumber b(5.0, 1.0);
     double num = 5.0;
 
-    std::cout << ">>> Demonstration of Complex Number Comparison <<<" << std::endl;
-    std::cout << std::endl;
+    std::cout << ">>> Demonstration of Complex Number Comparison <<<";
+    std::cout << std::endl << std::endl;
 
     std::cout << "Given:" << std::endl;
     std::cout << "  A   = " << a << std::endl;

@@ -2,7 +2,7 @@
 
 #include <matho/config.hpp>
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const * argv[]) {
     std::cout << "ComplexNumber version: ";
     std::cout << COMPLEX_NUMBER_VERSION_MAJOR << ".";
     std::cout << COMPLEX_NUMBER_VERSION_MINOR << ".";

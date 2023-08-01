@@ -17,8 +17,7 @@ ComplexNumber::ComplexNumber(ComplexNumber && complex_number) {
     this->imaginary_ = std::exchange(complex_number.imaginary_, 0.0);
 }
 
-ComplexNumber::~ComplexNumber() {
-}
+ComplexNumber::~ComplexNumber() {}
 
 double ComplexNumber::get_real() const {
     return this->real_;
@@ -64,21 +63,16 @@ std::string ComplexNumber::to_string() const {
 
     if (this->real_ == 0) {
         result << this->imaginary_ << "i";
-    }
-    else {
+    } else {
         if (this->imaginary_ == 0) {
             result << this->real_;
-        }
-        else if (this->imaginary_ == 1) {
+        } else if (this->imaginary_ == 1) {
             result << this->real_ << "+i";
-        }
-        else if (this->imaginary_ == -1) {
+        } else if (this->imaginary_ == -1) {
             result << this->real_ << "-i";
-        }
-        else if (this->imaginary_ < 0) {
+        } else if (this->imaginary_ < 0) {
             result << this->real_ << this->imaginary_ << "i";
-        }
-        else {
+        } else {
             result << this->real_ << "+" << this->imaginary_ << "i";
         }
     }
@@ -95,7 +89,7 @@ ComplexNumber & ComplexNumber::operator=(ComplexNumber && complex_number) {
     return *this;
 }
 
-std::istream &operator>>(std::istream &istr, ComplexNumber &val) {
+std::istream & operator>>(std::istream & istr, ComplexNumber & val) {
     double real, imaginary;
     istr >> real >> imaginary;
     val.set_real(real);
@@ -103,24 +97,24 @@ std::istream &operator>>(std::istream &istr, ComplexNumber &val) {
     return istr;
 }
 
-std::ostream &operator<<(std::ostream &ostr, const ComplexNumber &val) {
+std::ostream & operator<<(std::ostream & ostr, const ComplexNumber & val) {
     ostr << val.to_string();
     return ostr;
 }
 
-ComplexNumber &operator+=(ComplexNumber & left, const ComplexNumber & right) {
+ComplexNumber & operator+=(ComplexNumber & left, const ComplexNumber & right) {
     left.set_real(left.get_real() + right.get_real());
     left.set_imaginary(left.get_imaginary() + right.get_imaginary());
     return left;
 }
 
-ComplexNumber &operator-=(ComplexNumber & left, const ComplexNumber & right) {
+ComplexNumber & operator-=(ComplexNumber & left, const ComplexNumber & right) {
     left.set_real(left.get_real() - right.get_real());
     left.set_imaginary(left.get_imaginary() - right.get_imaginary());
     return left;
 }
 
-ComplexNumber &operator*=(ComplexNumber & left, const ComplexNumber & right) {
+ComplexNumber & operator*=(ComplexNumber & left, const ComplexNumber & right) {
     double a = left.get_real(), b = left.get_imaginary();
     double c = right.get_real(), d = right.get_imaginary();
     left.set_real(a * c - b * d);
@@ -128,7 +122,7 @@ ComplexNumber &operator*=(ComplexNumber & left, const ComplexNumber & right) {
     return left;
 }
 
-ComplexNumber &operator/=(ComplexNumber & left, const ComplexNumber & right) {
+ComplexNumber & operator/=(ComplexNumber & left, const ComplexNumber & right) {
     double a = left.get_real(), b = left.get_imaginary();
     double c = right.get_real(), d = right.get_imaginary();
     left.set_real((a * c + b * d) / (c * c + d * d));
@@ -136,23 +130,23 @@ ComplexNumber &operator/=(ComplexNumber & left, const ComplexNumber & right) {
     return left;
 }
 
-ComplexNumber &operator+=(ComplexNumber & left, double right) {
+ComplexNumber & operator+=(ComplexNumber & left, double right) {
     left.set_real(left.get_real() + right);
     return left;
 }
 
-ComplexNumber &operator-=(ComplexNumber & left, double right) {
+ComplexNumber & operator-=(ComplexNumber & left, double right) {
     left.set_real(left.get_real() - right);
     return left;
 }
 
-ComplexNumber &operator*=(ComplexNumber & left, double right) {
+ComplexNumber & operator*=(ComplexNumber & left, double right) {
     left.set_real(left.get_real() * right);
     left.set_imaginary(left.get_imaginary() * right);
     return left;
 }
 
-ComplexNumber &operator/=(ComplexNumber & left, double right) {
+ComplexNumber & operator/=(ComplexNumber & left, double right) {
     double a = left.get_real(), b = left.get_imaginary();
     double c = right;
     left.set_real((a * c) / (c * c));
@@ -160,4 +154,4 @@ ComplexNumber &operator/=(ComplexNumber & left, double right) {
     return left;
 }
 
-} // namespace matho
+}  // namespace matho

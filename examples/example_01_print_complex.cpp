@@ -2,7 +2,7 @@
 
 #include <matho/complex_number.hpp>
 
-int main(int argc, char const *argv[]) {
+int main(int argc, char const * argv[]) {
     matho::ComplexNumber a(0.0, 3.0);
     matho::ComplexNumber b(1.0, 2.0);
     matho::ComplexNumber c(1.0, 1.0);
@@ -13,8 +13,8 @@ int main(int argc, char const *argv[]) {
     matho::ComplexNumber h(1.0, -2.0);
     matho::ComplexNumber i;
 
-    std::cout << ">>> Demonstration of Printing Complex Number <<<" << std::endl;
-    std::cout << std::endl;
+    std::cout << ">>> Demonstration of Printing Complex Number <<<";
+    std::cout << std::endl << std::endl;
 
     std::cout << "Given:" << std::endl;
     std::cout << "  A = " << a << std::endl;
