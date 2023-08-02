@@ -7,14 +7,44 @@
 
 namespace matho {
 
+/**
+ * @brief Represents a complex number with real and imaginary components.
+ *
+ * This class provides basic operations for complex numbers including
+ * construction, copying, moving, computing magnitude, obtaining the conjugate,
+ * and converting to string format.
+ */
 class ComplexNumber {
 private:
     double real_, imaginary_;
 
 public:
+    /**
+     * @brief Constructs a ComplexNumber with the specified real and imaginary
+     * parts.
+     * @param real The real component of the complex number.
+     * @param imaginary The imaginary component of the complex number.
+     */
     explicit ComplexNumber(double real = 0.0, double imaginary = 0.0);
+
+    /**
+     * @brief Copy constructor. Creates a new ComplexNumber as a copy of
+     * another.
+     * @param complex_number The ComplexNumber instance to copy from.
+     */
     ComplexNumber(const ComplexNumber & complex_number);
+
+    /**
+     * @brief Move constructor. Initializes the ComplexNumber by taking
+     * resources from another.
+     *
+     * @param complex_number The ComplexNumber instance to move from.
+     */
     ComplexNumber(ComplexNumber && complex_number);
+
+    /**
+     * @brief Destructor for the ComplexNumber class.
+     */
     ~ComplexNumber();
 
     double get_real() const;
@@ -23,10 +53,25 @@ public:
     void set_real(double real);
     void set_imaginary(double imaginary);
 
+    /**
+     * @brief Computes the magnitude (absolute value) of the complex number.
+     * This is also known as the modulus of the complex number.
+     * @return The magnitude of the complex number.
+     */
     double abs() const;
+
+    /**
+     * @brief Returns the complex conjugate of the current complex number.
+     * @return A ComplexNumber representing the conjugate.
+     */
     ComplexNumber conjugate() const;
 
     // TODO: Considering support for `parse` and `try_parse`
+
+    /**
+     * @brief Converts the complex number to its string representation.
+     * @return A string representing the complex number in mathematical form.
+     */
     std::string to_string() const;
 
     ComplexNumber & operator=(const ComplexNumber & complex_number) = default;
