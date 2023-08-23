@@ -1,5 +1,3 @@
-set(LIBRARY_NAME matho::ComplexNumber)
-
 # Get all file `*.cpp` at current directory
 file(GLOB EXAMPLE_SOURCES *.cpp)
 
@@ -8,5 +6,5 @@ foreach(src ${EXAMPLE_SOURCES})
     get_filename_component(target ${src} NAME_WE)
 
     add_executable(${target} ${src})
-    target_link_libraries(${target} PRIVATE ${LIBRARY_NAME})
+    target_link_libraries(${target} PRIVATE ${COMPLEX_NUMBER_ALIAS})
 endforeach()
