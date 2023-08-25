@@ -6,6 +6,7 @@ include(cmake/utilities.cmake)
 
 option(BUILD_EXAMPLES "Build example programs" OFF)
 option(BUILD_TESTS "Build test programs" OFF)
+option(BUILD_SHARED_LIBS "Build shared libraries instead of static" OFF)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
