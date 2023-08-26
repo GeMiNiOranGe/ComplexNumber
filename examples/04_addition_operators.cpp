@@ -6,33 +6,34 @@ int main() {
     matho::ComplexNumber a(2, 3);
     matho::ComplexNumber b(4, -1);
 
-    std::cout << ">>> Demonstration of Complex Number Addition <<<";
-    std::cout << std::endl << std::endl;
+    std::cout << ">>> Demonstration of Addition <<<" << '\n';
+    std::cout << '\n';
 
-    std::cout << "Given:" << std::endl;
-    std::cout << "  A = " << a << std::endl;
-    std::cout << "  B = " << b << std::endl;
-    std::cout << std::endl;
+    std::cout << "Given:" << '\n';
+    std::cout << "  A = " << a << '\n';
+    std::cout << "  B = " << b << '\n';
+    std::cout << '\n';
 
-    std::cout << "We perform several addition operations:" << std::endl;
-    std::cout << "  1) A    + B   = " << a + b << std::endl;
-    std::cout << "  2) A    + 5.0 = " << a + 5.0 << std::endl;
-    std::cout << "  3) 10.0 + B   = " << 10.0 + b << std::endl;
-    std::cout << std::endl;
+    std::cout << "We perform several addition operations:" << '\n';
+    std::cout << "  1) A    + B   = " << a + b << '\n';
+    std::cout << "  2) A    + 5.0 = " << a + 5.0 << '\n';
+    std::cout << "  3) 10.0 + B   = " << 10.0 + b << '\n';
+    std::cout << '\n';
 
     matho::ComplexNumber c(1, 1);
     matho::ComplexNumber d(1, 1);
 
-    std::cout << "Now testing addition-assignment:" << std::endl;
-    std::cout << "  Initial C = " << c << std::endl;
-    std::cout << "  Initial D = " << d << std::endl;
-    std::cout << std::endl;
+    std::cout << "Now testing addition-assignment:" << '\n';
+    std::cout << "  Initial C = " << c << '\n';
+    std::cout << "  Initial D = " << d << '\n';
+    std::cout << '\n';
 
     c += a;
     d += 2.0;
 
-    std::cout << "  After C += A   -> C = " << c << std::endl;
-    std::cout << "  After D += 2.0 -> D = " << d << std::endl;
+    std::cout << "  After C += A   -> C = " << c << '\n';
+    std::cout << "  After D += 2.0 -> D = " << d << '\n';
+    std::cout << '\n';
 
     return 0;
 }

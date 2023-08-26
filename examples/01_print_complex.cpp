@@ -13,19 +13,20 @@ int main(int argc, char const * argv[]) {
     matho::ComplexNumber h(1.0, -2.0);
     matho::ComplexNumber i;
 
-    std::cout << ">>> Demonstration of Printing Complex Number <<<";
-    std::cout << std::endl << std::endl;
+    std::cout << ">>> Demonstration of Printing Complex Number <<<" << '\n';
+    std::cout << '\n';
 
-    std::cout << "Given:" << std::endl;
-    std::cout << "  A = " << a << std::endl;
-    std::cout << "  B = " << b << std::endl;
-    std::cout << "  C = " << c << std::endl;
-    std::cout << "  D = " << d << std::endl;
-    std::cout << "  E = " << e << std::endl;
-    std::cout << "  F = " << f << std::endl;
-    std::cout << "  G = " << g << std::endl;
-    std::cout << "  H = " << h << std::endl;
-    std::cout << "  I = " << i << std::endl;
+    std::cout << "Given:" << '\n';
+    std::cout << "  A = " << a << '\n';
+    std::cout << "  B = " << b << '\n';
+    std::cout << "  C = " << c << '\n';
+    std::cout << "  D = " << d << '\n';
+    std::cout << "  E = " << e << '\n';
+    std::cout << "  F = " << f << '\n';
+    std::cout << "  G = " << g << '\n';
+    std::cout << "  H = " << h << '\n';
+    std::cout << "  I = " << i << '\n';
+    std::cout << '\n';
 
     return 0;
 }

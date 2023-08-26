@@ -5,15 +5,16 @@
 int main(int argc, char const * argv[]) {
     matho::ComplexNumber a(3.0, 4.0);
 
-    std::cout << ">>> Demonstration of Conjugate Method <<<";
-    std::cout << std::endl << std::endl;
+    std::cout << ">>> Demonstration of Conjugate Method <<<" << '\n';
+    std::cout << '\n';
 
-    std::cout << "Given:" << std::endl;
-    std::cout << "  A = " << a << std::endl;
-    std::cout << std::endl;
+    std::cout << "Given:" << '\n';
+    std::cout << "  A = " << a << '\n';
+    std::cout << '\n';
 
-    std::cout << "After getting the complex conjugate number:" << std::endl;
-    std::cout << "  A.conjugate() = " << a.conjugate() << "\n";
+    std::cout << "After getting the complex conjugate number:" << '\n';
+    std::cout << "  A.conjugate() = " << a.conjugate() << '\n';
+    std::cout << '\n';
 
     return 0;
 }

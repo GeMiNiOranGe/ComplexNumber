@@ -7,32 +7,28 @@ int main(int argc, char const * argv[]) {
     matho::ComplexNumber b(5.0, 1.0);
     double num = 5.0;
 
-    std::cout << ">>> Demonstration of Complex Number Comparison <<<";
-    std::cout << std::endl << std::endl;
+    // Enable true/false printing mode instead of 1/0.
+    std::cout << std::boolalpha;
 
-    std::cout << "Given:" << std::endl;
-    std::cout << "  A   = " << a << std::endl;
-    std::cout << "  B   = " << b << std::endl;
-    std::cout << "  num = " << num << std::endl;
-    std::cout << std::endl;
+    std::cout << ">>> Demonstration of Comparison <<<" << '\n';
+    std::cout << '\n';
 
-    std::string result1 = (a == b ? "true" : "false");
-    std::string result2 = (a == num ? "true" : "false");
-    std::string result3 = (num == a ? "true" : "false");
+    std::cout << "Given:" << '\n';
+    std::cout << "  A   = " << a << '\n';
+    std::cout << "  B   = " << b << '\n';
+    std::cout << "  num = " << num << '\n';
+    std::cout << '\n';
 
-    std::cout << "We perform several comparison operations:" << std::endl;
-    std::cout << "  1) a   == b   ? -> " << result1 << std::endl;
-    std::cout << "  2) a   == num ? -> " << result2 << std::endl;
-    std::cout << "  3) num == a   ? -> " << result3 << std::endl;
-    std::cout << std::endl;
+    std::cout << "We perform several equality operations:" << '\n';
+    std::cout << "  1) a   == b   ? -> " << (a == b) << '\n';
+    std::cout << "  2) a   == num ? -> " << (a == num) << '\n';
+    std::cout << "  3) num == a   ? -> " << (num == a) << '\n';
+    std::cout << '\n';
 
-    std::string result4 = (a != b ? "true" : "false");
-    std::string result5 = (a != num ? "true" : "false");
-    std::string result6 = (num != a ? "true" : "false");
-
-    std::cout << "  4) a   != b   ? -> " << result4 << std::endl;
-    std::cout << "  5) a   != num ? -> " << result5 << std::endl;
-    std::cout << "  6) num != a   ? -> " << result6 << std::endl;
+    std::cout << "  4) a   != b   ? -> " << (a != b) << '\n';
+    std::cout << "  5) a   != num ? -> " << (a != num) << '\n';
+    std::cout << "  6) num != a   ? -> " << (num != a) << '\n';
+    std::cout << '\n';
 
     return 0;
 }
