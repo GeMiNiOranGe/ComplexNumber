@@ -11,7 +11,7 @@ A lightweight library that provides a simple `ComplexNumber` class for working w
 1. Configure all projects
 
 ```bash
-cmake -B build -S . -DBUILD_EXAMPLES=ON
+cmake -B build -S . -DMATHO_BUILD_COMPLEX_NUMBER_EXAMPLES=ON
 ```
 
 2. build projects
